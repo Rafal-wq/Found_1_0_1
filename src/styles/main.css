@@ -52,23 +52,6 @@ body {
     padding: 0 10px;
 }
 
-.credentials {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: var(--border-radius);
-    font-size: clamp(0.8rem, 2vw, 1rem);
-}
-
-.credentials p {
-    white-space: pre-line;
-    margin-bottom: 15px;
-}
-
-.credentials p:last-child {
-    margin-bottom: 0;
-}
-
 h1, h2, h3 {
     color: var(--color-text);
     text-align: center;

@@ -1,0 +1,12 @@
+[[headers]]
+  for = "/src/assets/docs/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    Content-Disposition = "attachment"
+
+[[redirects]]
+  from = "/docs/*"
+  to = "/src/assets/docs/:splat"
+  status = 200
+  force = true

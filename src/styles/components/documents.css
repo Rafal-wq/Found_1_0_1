@@ -1,0 +1,32 @@
+.documents-section {
+    max-width: var(--content-width);
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+}
+
+.documents-list {
+    width: 100%;
+}
+
+.document-link {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .documents-section {
+        padding: 15px;
+    }
+
+    .document-link {
+        padding: 20px 15px;
+    }
+}
