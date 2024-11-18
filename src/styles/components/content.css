@@ -1,3 +1,8 @@
+html, body {
+    -webkit-text-size-adjust: 100%;
+    touch-action: pan-x pan-y pinch-zoom;
+}
+
 h1, h2, h3 {
     color: var(--color-text);
     text-align: center;
@@ -56,13 +61,15 @@ p {
 .document-link {
     display: flex;
     align-items: center;
-    padding: 12px 15px;
+    padding: 15px;
     margin: 10px 0;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     color: white;
     text-decoration: none;
     transition: background-color 0.3s;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 
 .document-link:hover {
@@ -73,14 +80,20 @@ p {
     margin-right: 10px;
 }
 
+.document-link:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
 @media screen and (max-width: 768px) {
-    .documents-section {
-        padding: 15px;
-        margin: 20px auto;
+    .document-link {
+        padding: 12px;
+        font-size: 16px;
+        min-height: 44px;
     }
 
-    .document-link {
-        padding: 10px;
+    .document-icon {
+        font-size: 20px;
+        margin-right: 12px;
     }
 }
 
