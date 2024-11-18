@@ -1,0 +1,38 @@
+.languageWrap {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    justify-content: flex-end;
+}
+
+.flagHeader {
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--spacing-md);
+}
+
+.logoHeader {
+    width: 80px;
+    display: block;
+    margin: var(--spacing-md) auto;
+}
+
+a {
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-weight: bold;
+    background: var(--color-button-default);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    opacity: 0.9;
+}
+
+a.active {
+    background: var(--color-button-active);
+}

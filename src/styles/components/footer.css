@@ -1,0 +1,9 @@
+footer {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+.logoFooter {
+    width: 100px;
+    margin: 0 auto;
+}
