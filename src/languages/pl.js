@@ -14,6 +14,12 @@ export default {
         address: "Adres:\nMir-in-Terra e.V.\nKalbacher Hauptstr. 57\n60437 Frankfurt am Main",
         marketing: "Sąd Rejonowy we Frankfurcie n. Menem\n- Rejestr stowarzyszeń -\nMir-in-Terra e.V., VR 17229\nz siedzibą we Frankfurcie nad Menem"
     },
+    documents: {
+        title: "Dokumenty do pobrania",
+        de: "Dokument w języku niemieckim",
+        pl: "Dokument w języku polskim",
+        ua: "Dokument w języku ukraińskim"
+    },
     gallery: {
         label: "Gallery : "
     }

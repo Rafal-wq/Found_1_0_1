@@ -14,7 +14,13 @@ export default {
         address: "Amtsgericht Frankfurt am Main\n-Vereinsregister –\nMir-in-Terra e.V., VR 17229\nmit dem Sitz in Frankfurt am Main",
         marketing: "Marketing und Kommunikation\nMir-in-Terra e.V.\nKalbacher Hauptstr. 57\n60437 Frankfurt am Main"
     },
+    documents: {
+        title: "Dokumente zum Herunterladen",
+        de: "Dokument in deutscher Sprache",
+        pl: "Dokument in polnischer Sprache",
+        ua: "Dokument in ukrainischer Sprache"
+    },
     gallery: {
         label: "Gallery : "
-    }
+    },
 }

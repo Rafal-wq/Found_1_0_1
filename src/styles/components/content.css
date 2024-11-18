@@ -36,6 +36,54 @@ p {
     margin: var(--spacing-sm) 0;
 }
 
+.documents-section {
+    max-width: var(--content-width);
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+}
+
+.documents-section h3 {
+    margin-bottom: 20px;
+}
+
+.documents-list {
+    list-style: none;
+    padding: 0;
+}
+
+.document-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.document-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.document-link i {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .documents-section {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .document-link {
+        padding: 10px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     h1 { font-size: 1.5rem; }
     h2 { font-size: 1.25rem; }
