@@ -1,9 +1,20 @@
+[build]
+  publish = "/"
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+
 [[headers]]
   for = "/src/assets/docs/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
-    Content-Type = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    Content-Type = "application/pdf"
     Content-Disposition = "attachment"
+    X-Content-Type-Options = "nosniff"
+    Access-Control-Allow-Methods = "GET, OPTIONS"
+    Cache-Control = "public, max-age=0"
 
 [[redirects]]
   from = "/docs/*"
@@ -11,31 +22,7 @@
   status = 200
   force = true
 
-  [build]
-    publish = "/"
-
-  [[headers]]
-    for = "/*"
-      [headers.values]
-      Access-Control-Allow-Origin = "*"
-
-  [[headers]]
-    for = "/src/assets/docs/*"
-      [headers.values]
-      Access-Control-Allow-Origin = "*"
-      Content-Type = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-      Content-Disposition = "attachment"
-      X-Content-Type-Options = "nosniff"
-      Access-Control-Allow-Methods = "GET, OPTIONS"
-      Cache-Control = "public, max-age=0"
-
-  [[redirects]]
-    from = "/docs/*"
-    to = "/src/assets/docs/:splat"
-    status = 200
-    force = true
-
-  [[redirects]]
-    from = "/*"
-    to = "/index.html"
-    status = 200
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
