@@ -1,9 +1,16 @@
 [[headers]]
+  for = "*.pdf"
+    [headers.values]
+    Content-Type = "application/pdf"
+    Content-Disposition = "attachment"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
   for = "/assets/docs/*"
     [headers.values]
-    Access-Control-Allow-Origin = "*"
     Content-Type = "application/pdf"
-    Content-Disposition = "inline"
+    Content-Disposition = "attachment"
+    X-Content-Type-Options = "nosniff"
 
 [[redirects]]
   from = "/*"
