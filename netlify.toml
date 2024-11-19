@@ -3,11 +3,13 @@
     [headers.values]
     Access-Control-Allow-Origin = "*"
     Content-Type = "application/pdf"
-    Content-Disposition = "inline"
+    Content-Disposition = "attachment"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = "default-src 'self'"
 
 [[redirects]]
-  from = "/docs/*"
-  to = "/src/assets/docs/:splat"
+  from = "/src/assets/docs/*"
+  to = "/:splat"
   status = 200
   force = true
 

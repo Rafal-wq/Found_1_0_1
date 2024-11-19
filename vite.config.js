@@ -2,9 +2,18 @@ export default {
     server: {
         headers: {
             'Access-Control-Allow-Origin': '*',
-            'Content-Disposition': 'attachment',
-            'Content-Type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
         },
     },
-    assetsInclude: ['**/*.docx'],
+    build: {
+        rollupOptions: {
+            output: {
+                assetFileNames: (assetInfo) => {
+                    if (assetInfo.name.endsWith('.pdf')) {
+                        return '[name][extname]';
+                    }
+                    return 'assets/[name]-[hash][extname]';
+                },
+            },
+        },
+    },
 }

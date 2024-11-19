@@ -1,0 +1,4 @@
+/src/assets/docs/*
+  Access-Control-Allow-Origin: *
+  Content-Type: application/pdf
+  Content-Disposition: attachment
