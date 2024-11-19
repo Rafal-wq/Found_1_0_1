@@ -6,15 +6,13 @@
     [headers.values]
     Access-Control-Allow-Origin = "*"
 
-[[headers]]
-  for = "/src/assets/docs/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Content-Type = "application/pdf"
-    Content-Disposition = "attachment"
-    X-Content-Type-Options = "nosniff"
-    Access-Control-Allow-Methods = "GET, OPTIONS"
-    Cache-Control = "public, max-age=0"
+ [[headers]]
+    for = "/src/assets/docs/*"
+      [headers.values]
+      Access-Control-Allow-Origin = "*"
+      Content-Type = "application/pdf"
+      Content-Disposition = "attachment; filename=:splat"
+      X-Content-Type-Options = "nosniff"
 
 [[redirects]]
   from = "/docs/*"
@@ -23,6 +21,7 @@
   force = true
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+    from = "/docs/*"
+    to = "/src/assets/docs/:splat"
+    status = 200
+    force = true
