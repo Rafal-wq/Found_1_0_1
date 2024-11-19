@@ -5,15 +5,6 @@ export default {
         },
     },
     build: {
-        rollupOptions: {
-            output: {
-                assetFileNames: (assetInfo) => {
-                    if (assetInfo.name.endsWith('.pdf')) {
-                        return '[name][extname]';
-                    }
-                    return 'assets/[name]-[hash][extname]';
-                },
-            },
-        },
-    },
+    assetsInclude: ['**/*.pdf']
+},
 }

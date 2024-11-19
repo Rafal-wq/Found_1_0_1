@@ -1,19 +1,9 @@
 [[headers]]
-  for = "/src/assets/docs/*"
+  for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.pdf"
+    [headers.values]
     Content-Type = "application/pdf"
-    Content-Disposition = "attachment"
-    X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "default-src 'self'"
-
-[[redirects]]
-  from = "/src/assets/docs/*"
-  to = "/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
