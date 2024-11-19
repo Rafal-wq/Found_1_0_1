@@ -1,9 +1,11 @@
 [[headers]]
-  for = "/*"
+  for = "/assets/docs/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/*.pdf"
-    [headers.values]
     Content-Type = "application/pdf"
+    Content-Disposition = "attachment"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

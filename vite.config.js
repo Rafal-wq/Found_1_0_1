@@ -1,10 +1,8 @@
-export default {
-    server: {
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-        },
-    },
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+    publicDir: 'public',
     build: {
-    assetsInclude: ['**/*.pdf']
-},
-}
+        assetsInclude: ['**/*.pdf'],
+    }
+})
