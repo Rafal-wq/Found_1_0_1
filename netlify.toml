@@ -1,28 +1,9 @@
-[[redirects]]
-  from = "/docs/*"
-  to = "/assets/docs/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/assets/docs/*"
-  to = "/assets/docs/:splat"
-  status = 200
-  force = true
-
 [[headers]]
   for = "/assets/docs/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
     Content-Type = "application/pdf"
-    Content-Disposition = "attachment"
-
-[[headers]]
-  for = "/docs/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Content-Type = "application/pdf"
-    Content-Disposition = "attachment"
+    Content-Disposition = "inline"
 
 [[redirects]]
   from = "/*"
