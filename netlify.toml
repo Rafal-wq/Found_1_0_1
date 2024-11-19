@@ -6,6 +6,12 @@
     Content-Disposition = "attachment"
 
 [[redirects]]
+  from = "/docs/*"
+  to = "/assets/docs/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
