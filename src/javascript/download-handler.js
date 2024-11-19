@@ -1,24 +1,33 @@
-document.querySelectorAll('.document-link').forEach(link => {
-    link.addEventListener('click', async (e) => {
-        e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.document-link').forEach(link => {
+        link.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const path = link.getAttribute('href');
+            const filename = path.split('/').pop();
 
-        try {
-            const response = await fetch(link.href);
-            if (!response.ok) throw new Error('Network response was not ok');
+            try {
+                console.log('Rozpoczynam pobieranie:', path);
 
-            const blob = await response.blob();
-            const downloadUrl = window.URL.createObjectURL(blob);
+                const response = await fetch(path);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
 
-            const tempLink = document.createElement('a');
-            tempLink.href = downloadUrl;
-            tempLink.download = link.getAttribute('download');
-            document.body.appendChild(tempLink);
-            tempLink.click();
-            document.body.removeChild(tempLink);
-            window.URL.revokeObjectURL(downloadUrl);
-        } catch (error) {
-            console.error('Download failed:', error);
-            alert('Nie udało się pobrać pliku. Spróbuj ponownie później.');
-        }
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+
+                console.log('Pobieranie zakończone');
+            } catch (error) {
+                console.error('Błąd podczas pobierania:', error);
+                alert(`Nie udało się pobrać pliku: ${filename}`);
+            }
+        });
     });
 });

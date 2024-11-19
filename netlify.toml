@@ -1,18 +1,9 @@
-[build]
-  publish = "/"
-
 [[headers]]
-  for = "/*"
+  for = "/src/assets/docs/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
-
- [[headers]]
-    for = "/src/assets/docs/*"
-      [headers.values]
-      Access-Control-Allow-Origin = "*"
-      Content-Type = "application/pdf"
-      Content-Disposition = "attachment; filename=:splat"
-      X-Content-Type-Options = "nosniff"
+    Content-Type = "application/pdf"
+    Content-Disposition = "inline"
 
 [[redirects]]
   from = "/docs/*"
@@ -21,7 +12,6 @@
   force = true
 
 [[redirects]]
-    from = "/docs/*"
-    to = "/src/assets/docs/:splat"
-    status = 200
-    force = true
+  from = "/*"
+  to = "/index.html"
+  status = 200
