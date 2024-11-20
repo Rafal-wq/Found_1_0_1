@@ -21,6 +21,14 @@
     text-decoration: none;
 }
 
+.document-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.document-link span {
+    margin-left: 5px;
+}
+
 @media screen and (max-width: 768px) {
     .documents-section {
         padding: 15px;
