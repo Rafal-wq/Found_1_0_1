@@ -89,7 +89,8 @@ footer {
 @media screen and (max-width: 768px) {
     .footer-container {
         flex-direction: column;
-        gap: 30px;
+        text-align: center;
+        gap: 10px;
     }
 
     .footer-column {
@@ -104,21 +105,31 @@ footer {
     }
 
     footer {
-        padding: 30px 15px 60px;
+        padding: 30px 15px 20px;
+        position: relative;
     }
 
     .footer-bottom {
-        height: auto;
-        margin-top: 30px;
+        margin-top: 20px;
+        padding-top: 10px;
         position: relative;
+        height: 120px;
     }
 
     .logoFooter {
         width: 80px;
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
         bottom: -40px;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .footer-bottom-text {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        text-align: right;
     }
 }
 
