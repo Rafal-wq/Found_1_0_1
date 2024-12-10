@@ -36,13 +36,6 @@ footer {
     line-height: 1.1;
 }
 
-.email-container a {
-    color: #ffffff;
-    text-decoration: none;
-    background: none;
-    padding: 0;
-}
-
 .email-container {
     background-color: #2a337e;
     padding: 8px 15px;
@@ -50,6 +43,13 @@ footer {
     display: inline-block;
     white-space: nowrap;
     margin-top: 1px;
+}
+
+.email-container a {
+    color: #ffffff;
+    text-decoration: none;
+    background: none;
+    padding: 0;
 }
 
 .footer-bottom {
@@ -65,15 +65,6 @@ footer {
 .logoFooter {
     width: 100px;
     margin: 0 auto;
-}
-
-.footer-bottom p {
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    font-size: 0.8em;
-    line-height: 1.1;
-    text-align: right;
 }
 
 .footer-bottom-text {
@@ -93,4 +84,67 @@ footer {
     font-size: 0.8em;
     line-height: 1.1;
     text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-column {
+        text-align: center;
+        padding: 0;
+    }
+
+    .email-container {
+        display: block;
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    footer {
+        padding: 30px 15px 60px;
+    }
+
+    .footer-bottom {
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .logoFooter {
+        width: 80px;
+        margin-bottom: 5px;
+    }
+
+    .footer-bottom-text {
+        width: 100%;
+        right: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-bottom-text p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 20px 10px 50px;
+        border-radius: 10px;
+    }
+
+    .footer-column h4 {
+        font-size: 1em;
+    }
+
+    .footer-column p {
+        font-size: 0.85em;
+    }
+
+    .email-container {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
 }
