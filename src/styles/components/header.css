@@ -17,7 +17,7 @@
     margin: var(--spacing-md) auto;
 }
 
-a {
+.languageWrap a {
     display: inline-block;
     text-transform: uppercase;
     color: white;
@@ -29,10 +29,10 @@ a {
     transition: background-color 0.3s;
 }
 
-a:hover {
+.languageWrap a:hover {
     opacity: 0.9;
 }
 
-a.active {
+.languageWrap a.active {
     background: var(--color-button-active);
 }
